@@ -49,7 +49,7 @@ SMODS.Joker{
         return {vars = {card.ability.mult}}
     end,
     calculate = function(card, context)
-        if SMODS.end_calculate_context(context) then
+        if context.joker_main then
             return {
                 mult_mod = card.ability.mult,
                 colour = G.C.RED,
